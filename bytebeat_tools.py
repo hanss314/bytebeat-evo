@@ -1,4 +1,6 @@
 from operations import sing_ops, doub_ops
+from math import sin, log
+import time
 
 def parse_func(function):
     if type(function) is int:
@@ -21,4 +23,10 @@ def parse_func(function):
                 return '({}){}({})'.format(left,op,right)
 
 if __name__ =='__main__':
-    print(parse_func([[0,3],9,-6]))
+    start = time.time()
+    func = parse_func([[[-1,4,[4,7,[1,3,[7,2,[-1,4,19]]]]],0,-1],4,7])
+    print(str(time.time()-start))
+    parse_time = time.time()
+    for t in range(800000):
+        q = eval(func)
+    print(str(time.time()-parse_time))
