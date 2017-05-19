@@ -1,6 +1,6 @@
-from operations import sing_ops, doub_ops
-from math import sin, log
 import time
+from math import sin, log
+from operations import sing_ops, doub_ops
 
 def parse_func(function):
     if type(function) is int:
